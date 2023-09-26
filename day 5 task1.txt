@@ -1,0 +1,148 @@
+DAY 5 TASK
+
+1.for the given JSON iterate over all for loops(for, for in, for of, for each).
+answers:
+1.for condition:
+         when we want to run the code multiple times, we use the for condition.
+         for loop is divided into two
+          a.using an array
+          b.making a loop through the dom element
+
+a.using an array:
+     
+   var number=[10, 20, 30, 40, 50];
+   for(var i=0; i<number.length; i++)
+   {
+       console.log(number[i]);
+   }
+output:10
+       20
+       30
+       40
+       50
+
+b.making a loop through the dom element:
+       var all = document.getElementsByTagName("*");
+
+       for (var i=0, max=all.length; i < max; i++) {
+     // Do something with the element here
+}
+
+other example:
+     var elements = document.querySelectorAll("a");
+     for (var i=0; i<elements.length; i++) {
+   elements[i].style.color = "red";
+}
+ output:
+      all the element in the query selector is red.
+
+2.for in condition:
+      For In Loop is essentially a simplified version of the For Loop.
+
+The following are different ways of looping using the For In technique.
+
+1. Looping through an Object Property:
+var person = {
+   fname: "Nick",
+   lname: "Jonas",
+   age: 26
+}; 
+for (let x in person) {
+   console.log(x + ": "+ person[x])
+}
+
+output:
+fname: Nick
+lname: Jonas
+age: 26
+
+Looping Using JSON: 
+      It is one of the most commonly used techniques for transporting data that is the array format or in attribute values. 
+
+example1:
+var json = {
+   one: [11, 12, 13, 14, 15],
+   two: [21, 22, 23],
+   three: [31, 32]
+}
+};
+for(var key in json.jsonData) {
+   for (var key1 in json.jsonData[key]) {
+       console.log(json.jsonData[key][key1])
+   }
+
+output: 11
+        12
+        13
+        14
+        15
+        21
+        22
+        23
+        31
+        32
+
+3. The ForEach():
+       This method is used for looping through an array element. Here’s an example of this:
+
+example1:
+var names = ["jerry", "tom", "pluto", "micky", "mini"];
+names.forEach(function1);
+function function1(currentValue, index) {
+   console.log("Index in array is: "+index + " ::  Value is: "+currentValue);
+}
+
+output:
+Index in array is: 0 ::  Value is: jerry
+Index in array is: 1 ::  Value is: tom
+Index in array is: 2 ::  Value is: pluto
+Index in array is: 3 ::  Value is: micky
+Index in array is: 4 ::  Value is: mini
+
+4.for of loop condition:
+       The for..of loop in JavaScript allows you to iterate over iterable objects (arrays, sets, maps, strings etc).
+       The syntax of the for...of loop is:
+
+              for (element of iterable) {
+                   // body of for...of
+               }
+
+example1:for of loop with an array
+const students = ['John', 'Sara', 'Jack'];
+for ( let element of students ) {
+
+    console.log(element);
+}
+
+output:
+John
+Sara
+Jack
+
+example2:for...of with Strings
+         You can use for...of loop to iterate over string values. 
+
+
+const string = 'code';
+for (let i of string) {
+    console.log(i);
+}
+
+output:
+c
+o
+d
+e
+
+example3:for...of with Sets
+         You can iterate through Set elements using the for...of loop. 
+
+const set = new Set([1, 2, 3]);
+for (let i of set) {
+    console.log(i);
+}
+
+output:
+1
+2
+3
